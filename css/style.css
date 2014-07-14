@@ -1,0 +1,1046 @@
+/* ========================================================================== 
+Mixins  
+========================================================================== */
+@-webkit-keyframes fade {
+  /* line 32, Sass/style.scss */
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+
+  /* line 33, Sass/style.scss */
+  50% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  /* line 34, Sass/style.scss */
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+}
+
+@-webkit-keyframes rotation {
+  /* line 38, Sass/style.scss */
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 44, Sass/style.scss */
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes counter-rotation {
+  /* line 53, Sass/style.scss */
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 59, Sass/style.scss */
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+/* ========================================================================== 
+global    
+========================================================================== */
+/* line 133, Sass/style.scss */
+html {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 141, Sass/style.scss */
+body {
+  letter-spacing: 1px;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", Arial, Helvetica, Geneva, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 155, Sass/style.scss */
+a {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}
+
+/* line 161, Sass/style.scss */
+a:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+  /* For IE8 and earlier */
+}
+
+/* line 166, Sass/style.scss */
+hr {
+  border: 0;
+  height: 1px;
+}
+
+/* line 173, Sass/style.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 179, Sass/style.scss */
+ul li {
+  list-style: none;
+  float: left;
+}
+
+/* line 184, Sass/style.scss */
+span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+/* ========================================================================== 
+Sharing & download
+========================================================================== */
+/* line 193, Sass/style.scss */
+.connecting {
+  position: absolute;
+  z-index: 600;
+  top: 25px;
+  left: 25px;
+}
+/* line 199, Sass/style.scss */
+.connecting ul:last-of-type .sharing {
+  letter-spacing: 3px;
+}
+
+/* line 205, Sass/style.scss */
+.sharing {
+  width: 160px;
+  height: 45px;
+  border: 2px solid #fff;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 45px;
+  padding-left: 8px;
+  font-size: 1.125em;
+  margin-bottom: 10px;
+}
+/* line 218, Sass/style.scss */
+.sharing + li {
+  width: 0;
+  height: 49px;
+  overflow: hidden;
+  -webkit-transition: width .3s ease-in-out;
+}
+
+/* line 227, Sass/style.scss */
+.social {
+  letter-spacing: -4px;
+}
+/* line 230, Sass/style.scss */
+.social a {
+  border: 2px solid #fff;
+  color: #fff;
+  display: block;
+  background: url("../images/social_sprite.png") no-repeat left top;
+  height: 45px;
+  width: 45px;
+  overflow: hidden;
+  text-indent: -999px;
+  background-position-x: -5px;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+/* line 243, Sass/style.scss */
+.social li:nth-of-type(2) a {
+  background-position-x: -42px;
+}
+/* line 247, Sass/style.scss */
+.social li:last-of-type a {
+  background-position-x: -81px;
+}
+
+/* line 252, Sass/style.scss */
+.bandcamp {
+  overflow: hidden;
+}
+/* line 255, Sass/style.scss */
+.bandcamp a {
+  border: 2px solid #fff;
+  color: #fff;
+  display: block;
+  background: url("../images/bandcamp.png") no-repeat left top;
+  height: 45px;
+  width: 130px;
+  overflow: hidden;
+  text-indent: -999px;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
+/* ========================================================================== 
+Titleing
+========================================================================== */
+/* line 274, Sass/style.scss */
+.titling {
+  width: 470px;
+  height: 470px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 700;
+  text-align: center;
+  vertical-align: middle;
+  left: 50%;
+  top: 50%;
+  margin-left: -235px;
+  margin-top: -235px;
+}
+/* line 288, Sass/style.scss */
+.titling span {
+  font-size: 4.1875em;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 175px;
+  left: 50%;
+  margin-left: -133px;
+}
+/* line 297, Sass/style.scss */
+.titling span + span {
+  display: block;
+  font-size: 2.0625em;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-top: 72px;
+  left: 50%;
+  margin-left: -50px;
+}
+
+/* ========================================================================== 
+Controlls
+========================================================================== */
+/* line 314, Sass/style.scss */
+.controlls {
+  width: 1000px;
+  height: 470px;
+  position: absolute;
+  z-index: 600;
+  left: 50%;
+  top: 50%;
+  margin-left: -500px;
+  margin-top: -235px;
+}
+/* line 324, Sass/style.scss */
+.controlls ul li a {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -999px;
+}
+/* line 330, Sass/style.scss */
+.controlls a:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+/* line 336, Sass/style.scss */
+.controlls div {
+  display: inline-block;
+  width: 470px;
+  height: 470px;
+  border-radius: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -235px;
+  margin-top: -235px;
+  display: none;
+}
+/* line 350, Sass/style.scss */
+.controlls span {
+  position: absolute;
+  z-index: 600;
+  left: 50%;
+  top: 50%;
+  margin-top: 40px;
+  margin-left: -232px;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 4px;
+  width: 470px;
+  font-weight: 300;
+}
+
+/* line 365, Sass/style.scss */
+.back {
+  padding: 221px 0;
+}
+/* line 368, Sass/style.scss */
+.back a {
+  background: url("../images/back_sprite.png") no-repeat left top;
+  background-size: 47px;
+  width: 47px;
+  height: 23px;
+}
+
+/* line 377, Sass/style.scss */
+.next {
+  padding: 221px 0;
+  float: right;
+}
+/* line 381, Sass/style.scss */
+.next a {
+  background: url("../images/back_sprite.png") no-repeat left top;
+  background-size: 47px;
+  background-position-y: -28px;
+  width: 47px;
+  height: 23px;
+}
+
+/* line 393, Sass/style.scss */
+.play {
+  background: url("../images/play_sprite.png") no-repeat center top;
+  background-size: 30px;
+  overflow: hidden;
+  text-indent: -999px;
+  width: 47px;
+  height: 34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -17px;
+  margin-left: -23.5px;
+  -webkit-transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+
+/* line 410, Sass/style.scss */
+.pause {
+  background: url("../images/play_sprite.png") no-repeat center top;
+  background-size: 30px;
+  overflow: hidden;
+  text-indent: -999px;
+  background-position-y: -34px;
+  width: 47px;
+  height: 34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -17px;
+  margin-left: -23.5px;
+  -webkit-transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+
+/* line 429, Sass/style.scss */
+.flip {
+  -webkit-transform: rotatex(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotatex(180deg);
+}
+
+/* ========================================================================== 
+Circle nav
+========================================================================== */
+/* line 443, Sass/style.scss */
+.circles {
+  position: absolute;
+  z-index: 600;
+  right: 40px;
+  top: 50%;
+  margin-top: -32px;
+}
+/* line 451, Sass/style.scss */
+.circles li {
+  float: none;
+  display: block;
+  margin-top: 5px;
+}
+/* line 457, Sass/style.scss */
+.circles a {
+  display: block;
+  overflow: hidden;
+  text-indent: -999px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  -webkit-transition: all .3s ease-in-out;
+}
+
+/* line 471, Sass/style.scss */
+.active-circle {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+/* ========================================================================== 
+Timer
+========================================================================== */
+/* line 483, Sass/style.scss */
+.timer {
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  top: 50%;
+  margin-left: -301px;
+  margin-top: -301px;
+  border: 2px solid #ffffff;
+  width: 590px;
+  height: 590px;
+  border-radius: 100%;
+  padding: 6px;
+}
+/* line 496, Sass/style.scss */
+.timer:before {
+  content: '';
+  width: 456px;
+  height: 456px;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  top: 50%;
+  margin-left: -228px;
+  margin-top: -228px;
+}
+
+/* ========================================================================== 
+Slide One
+========================================================================== */
+/* line 520, Sass/style.scss */
+.background-one {
+  background: url("../images/industrial_bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  z-index: 400;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+
+/* line 529, Sass/style.scss */
+#industrial5 {
+  background: url("../images/industrial_bg_circle_5A.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  z-index: 2;
+}
+
+/* line 537, Sass/style.scss */
+#industrial4 {
+  background: url("../images/industrial_bg_circle_4.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: rotation 55s infinite linear;
+  -moz-animation: rotation 55s infinite linear;
+  -o-animation: rotation 55s infinite linear;
+  animation: rotation 55s infinite linear;
+  -webkit-animation-delay: 4.25s;
+  /*Safari and Chrome*/
+}
+
+/* line 545, Sass/style.scss */
+#industrial3 {
+  background: url("../images/industrial_bg_circle_3.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: fade 20s infinite, counter-rotation 26s infinite linear;
+  -moz-animation: fade 20s infinite, counter-rotation 26s infinite linear;
+  -o-animation: fade 20s infinite, counter-rotation 26s infinite linear;
+  animation: fade 20s infinite, counter-rotation 26s infinite linear;
+  -webkit-animation-delay: 4.25s;
+  /*Safari and Chrome*/
+}
+
+/* line 553, Sass/style.scss */
+#industrial2 {
+  background: url("../images/industrial_bg_circle_2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: counter-rotation 55s infinite linear;
+  -moz-animation: counter-rotation 55s infinite linear;
+  -o-animation: counter-rotation 55s infinite linear;
+  animation: counter-rotation 55s infinite linear;
+  -webkit-animation-delay: 4.25s;
+  /*Safari and Chrome*/
+}
+
+/* line 562, Sass/style.scss */
+#industrial1 {
+  background: url("../images/industrial_bg_circle_1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+/* ========================================================================== 
+Section Two
+========================================================================== */
+/* line 578, Sass/style.scss */
+.background-two {
+  background: url("../images/buildface_bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 300;
+  overflow: hidden;
+}
+
+/* line 587, Sass/style.scss */
+#buildface5 {
+  background: url("../images/buildface_bg_circle_5.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+/* line 593, Sass/style.scss */
+#buildface4 {
+  background: url("../images/buildface_bg_circle_4.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: fade 20s infinite, rotation 18s infinite linear;
+  -moz-animation: fade 20s infinite, rotation 18s infinite linear;
+  -o-animation: fade 20s infinite, rotation 18s infinite linear;
+  animation: fade 20s infinite, rotation 18s infinite linear;
+}
+
+/* line 600, Sass/style.scss */
+#buildface3 {
+  background: url("../images/buildface_bg_circle_3A.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  z-index: 2;
+}
+
+/* line 608, Sass/style.scss */
+#buildface2 {
+  background: url("../images/buildface_bg_circle_2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: counter-rotation 26s infinite linear;
+  -moz-animation: counter-rotation 26s infinite linear;
+  -o-animation: counter-rotation 26s infinite linear;
+  animation: counter-rotation 26s infinite linear;
+}
+
+/* line 615, Sass/style.scss */
+#buildface1A {
+  background: url("../images/buildface_bg_circle_1A.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: rotation 18s infinite linear;
+  -moz-animation: rotation 18s infinite linear;
+  -o-animation: rotation 18s infinite linear;
+  animation: rotation 18s infinite linear;
+}
+
+/* line 622, Sass/style.scss */
+#buildface1 {
+  background: url("../images/buildface_bg_circle_1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+/* ========================================================================== 
+Section Three
+========================================================================== */
+/* line 635, Sass/style.scss */
+.background-three {
+  background: url("../images/cottage_bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 200;
+  overflow: hidden;
+}
+
+/* line 644, Sass/style.scss */
+#cottage5 {
+  background: url("../images/cottage_bg_circle_5.png") no-repeat center center;
+  background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: fade 20s infinite, rotation 18s infinite linear;
+  -moz-animation: fade 20s infinite, rotation 18s infinite linear;
+  -o-animation: fade 20s infinite, rotation 18s infinite linear;
+  animation: fade 20s infinite, rotation 18s infinite linear;
+}
+
+/* line 652, Sass/style.scss */
+#cottage4 {
+  background: url("../images/cottage_bg_circle_4.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: rotation 55s infinite linear;
+  -moz-animation: rotation 55s infinite linear;
+  -o-animation: rotation 55s infinite linear;
+  animation: rotation 55s infinite linear;
+  z-index: 1;
+}
+
+/* line 660, Sass/style.scss */
+#cottage3 {
+  background: url("../images/cottage_bg_circle_3.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+/* line 666, Sass/style.scss */
+#cottage2 {
+  background: url("../images/cottage_bg_circle_2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  z-index: 1;
+}
+
+/* line 673, Sass/style.scss */
+#cottage1 {
+  background: url("../images/cottage_bg_circle_1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: counter-rotation 26s infinite linear;
+  -moz-animation: counter-rotation 26s infinite linear;
+  -o-animation: counter-rotation 26s infinite linear;
+  animation: counter-rotation 26s infinite linear;
+}
+
+/* ========================================================================== 
+Section Four
+========================================================================== */
+/* line 686, Sass/style.scss */
+.background-four {
+  background: url("../images/hall_bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* line 695, Sass/style.scss */
+#hall5 {
+  background: url("../images/hall_bg_circle_5.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: fade 20s infinite, rotation 18s infinite linear;
+  -moz-animation: fade 20s infinite, rotation 18s infinite linear;
+  -o-animation: fade 20s infinite, rotation 18s infinite linear;
+  animation: fade 20s infinite, rotation 18s infinite linear;
+}
+
+/* line 702, Sass/style.scss */
+#hall4 {
+  background: url("../images/hall_bg_circle_4.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: counter-rotation 55s infinite linear;
+  -moz-animation: counter-rotation 55s infinite linear;
+  -o-animation: counter-rotation 55s infinite linear;
+  animation: counter-rotation 55s infinite linear;
+}
+
+/* line 709, Sass/style.scss */
+#hall3 {
+  background: url("../images/hall_bg_circle_3.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  z-index: 2;
+}
+
+/* line 716, Sass/style.scss */
+#hall2 {
+  background: url("../images/hall_bg_circle_2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+/* line 722, Sass/style.scss */
+#hall1 {
+  background: url("../images/hall_bg_circle_1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+  -webkit-animation: rotation 18s infinite linear;
+  -moz-animation: rotation 18s infinite linear;
+  -o-animation: rotation 18s infinite linear;
+  animation: rotation 18s infinite linear;
+}
+
+/* line 732, Sass/style.scss */
+.active-slide {
+  opacity: 1;
+  filter: alpha(opacity=1);
+  /* For IE8 and earlier */
+}
